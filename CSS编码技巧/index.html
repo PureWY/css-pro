@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button>YES!</button>
+    </div>
+
+    <div class="one">
+        <div>
+            <p>此处水深，禁止垂钓!</p>
+        </div>
+    </div>
+</body>
+<style>
+    div button{
+        margin: 50px;
+        padding: .3em .8em;
+        border: 1px solid #446d88;
+        background: #58a linear-gradient(#77a0bb, #58a);
+        border-radius: .2em;
+        box-shadow: 0 .05em .25em gray;
+        /* shadow的三个值分别是：水平阴影的值，垂直阴影的值与模糊距离的值，最后是颜色 */
+        color: white;
+        text-shadow: 0 -.05em .05em #335166;
+        font-size: 125%;
+        line-height: 1.5;
+    }
+
+    .one div {
+        margin: 50px;
+        width: 200px;
+        height: 100px;
+        border: 1px solid green;
+        position: relative;
+    }
+    .one div::before{
+        content: "";
+        position: absolute;
+        border: inherit;
+        border-bottom: 0;
+        border-right: 0;
+        transform: rotate(45deg);
+        top: -.4em;
+        left: 1em;
+        padding: .35em;
+    }
+</style>
+</html>
